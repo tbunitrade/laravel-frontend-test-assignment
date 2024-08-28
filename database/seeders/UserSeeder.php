@@ -23,7 +23,8 @@ class UserSeeder extends Seeder
                 'email' => $faker->unique()->safeEmail,
                 'phone' => '+380' . $faker->unique()->randomNumber(9, true),
                 'position_id' => $faker->randomElement($positions),
-                'photo' => 'default.jpg' // Временно, позже заменим на реальное изображение
+                'photo' => 'default.jpg', // Временно, позже заменим на реальное изображение
+                'password' => bcrypt('password'), // Устанавливаем хэшированный пароль по умолчанию
             ]);
         }
     }
