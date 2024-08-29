@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Upload Image</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 <body>
 <h1>Upload Image</h1>

@@ -20,6 +20,7 @@ class ImageController extends Controller
 
         // Получаем ключ API из файла .env
         $apiKey = env('TINIFY_API_KEY');
+        \Log::info('API Key from .env: ' . $apiKey); // Добавьте это для отладки
 
         if (!$apiKey) {
             return response()->json(['error' => 'API key is missing']);
